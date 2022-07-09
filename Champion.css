@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#v3d-container {
+    position: relative;
+}
+
+.spinner-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(56, 55, 55, 0.7);
+}
+
+.fullscreen-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-size: 100% 100%;
+    display: none;
+    z-index: 1;
+}
+
+.fullscreen-open {
+    background-image: url('media/fullscreen_open.svg');
+}
+
+.fullscreen-close {
+    background-image: url('media/fullscreen_close.svg');
+}
+
+.v3d-simple-preloader-logo {
+    background-image: none;
+}
+
+/* removes tap blinking on ios devices */
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #c54a4a;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+}
+
+.main {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+}
+
+.panel {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+@media (max-width: 576px) {
+    .main {
+        flex-direction: column-reverse;
+    }
+
+    .panel {
+        position: relative;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 60%;
+        bottom: 0;
+    }
+
+
+}

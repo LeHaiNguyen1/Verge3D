@@ -1,0 +1,263 @@
+button:focus {
+	outline: none;
+}
+
+.main {
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	scroll-snap-align: start;
+}
+
+.force-overflow {
+	min-height: 450px;
+}
+
+::-webkit-scrollbar {
+	width: 2px;
+	height: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #c54a4a;
+}
+
+.material-section {
+	/*width: 60vh;*/
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-grow: 1;
+}
+
+.title {
+	color: brown;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.main .scrollbar > .part-item-container {
+	width: 100%;
+}
+
+.main .scrollbar > .part-item-container > button {
+	width: 90%;
+	height: fit-content;
+	text-align: center;
+	background-color: transparent;
+	border-radius: 10px;
+	margin-bottom: 0.5em;
+	border: none;
+}
+
+.main .scrollbar > .part-item-container > button:hover {
+	border: 1px dotted blue;
+}
+
+.main .scrollbar > .part-item-container > button.active {
+	border: 0px dotted red;
+}
+
+.main .scrollbar > .part-item-container > button > img {
+	width: 80%;
+}
+
+.container-btn {
+	width: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.container-btn > button {
+	height: 40px;
+	width: 40px;
+	margin: 0.4em;
+	border: 0px;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+
+.btn-glossy.navi {
+	background-image: url("../assets/icon/glossy_navi.jpg");
+}
+
+.btn-glossy.green {
+	background-image: url("../assets/icon/glossy_green.jpg");
+}
+
+.btn-glossy.pink {
+	background-image: url("../assets/icon/glossy_pink.jpg");
+}
+
+.btn-glossy.purple {
+	background-image: url("../assets/icon/glossy_purple.jpg");
+}
+
+.btn-glossy.red {
+	background-image: url("../assets/icon/glossy_red.jpg");
+}
+
+.btn-glossy.white {
+	background-image: url("../assets/icon/glossy_white.jpg");
+}
+
+.btn-glossy.yellow {
+	background-image: url("../assets/icon/glossy_yellow.jpg");
+}
+
+.btn-glossy.carbon {
+	background-image: url("../assets/icon/carbon.jpg");
+}
+
+.btn-glossy {
+	background-color: transparent;
+}
+
+.btn-glossy.active {
+	border: 0px dotted darkred;
+}
+
+.btn-glossy > img {
+	width: 100%;
+}
+
+
+.container-btn-color > button {
+	height: 40px;
+	width: 40px;
+	margin: 0.4em;
+	border: 0px;
+}
+
+.container-btn-color > .logo-blue {
+	background-color: #005AFF;
+}
+
+.container-btn-color > .logo-black {
+	background-color: #000000;
+}
+
+.container-btn-color > .logo-white {
+	background-color: #CCCCCC;
+}
+
+.container-btn-color > .logo-red {
+	background-color: #FF0009;
+}
+
+.container-btn-color > .logo-green {
+	background-color: #00FFCF;
+}
+
+.container-btn-color > .logo-yellow {
+	background-color: #FFFC00;
+}
+
+.container-btn-color > .logo-pin {
+	background-color: #E700E4;
+}
+
+.container-btn-color > .logo-purple {
+	background-color: #9E00FF;
+}
+
+.leather-green {
+	background-image: url("../assets/icon/gan_green.jpg");
+}
+
+.leather-pink {
+	background-image: url("../assets/icon/gan_pink.jpg");
+}
+
+.leather-black {
+	background-image: url("../assets/icon/gan_black.jpg");
+}
+
+.leather-navi {
+	background-image: url("../assets/icon/gan_navi.jpg");
+}
+
+.leather-white {
+	background-image: url("../assets/icon/leather_white.jpg");
+}
+
+.top-black {
+	background-image: url("../assets/icon/gan_black.jpg");
+}
+
+.top-green {
+	background-image: url("../assets/icon/gan_green.jpg");
+}
+
+.top-navi {
+	background-image: url("../assets/icon/gan_navi.jpg");
+}
+
+.top-pink {
+	background-image: url("../assets/icon/gan_pink.jpg");
+}
+
+.top-white {
+	background-image: url("../assets/icon/gan_white.jpg");
+}
+
+.material-item {
+	width: 100%;
+	height: 100%;
+	display: none;
+
+
+}
+
+.material-item.active {
+	display: block;
+	border: 0px;
+}
+
+.scrollbar {
+	background-color: #F5F5F5;
+	float: left;
+	height: 100%;
+	width: 150px;
+	display: flex;
+	justify-content: center;
+	overflow: auto;
+}
+
+@media (max-width: 500px) {
+	.scrollbar {
+		width: 100%;
+		height: 70px;
+		justify-content: center;
+		display: flex;
+		flex-direction: row;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+		gap: 2rem;
+		scroll-padding: 48px;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.main .scrollbar > .part-item-container {
+		height: 100%;
+		font-size: x-small;
+	}
+
+	.main .scrollbar > .part-item-container > button {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 70px;
+		width: 70px;
+	}
+
+	.main .scrollbar > .part-item-container > button > img {
+		width: 40px;
+		height: 40px;
+	}
+
+}
+

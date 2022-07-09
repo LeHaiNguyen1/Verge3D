@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<!-- __V3D_PUZZLES__ - enable Puzzles button in the App Manager -->
+<!-- __V3D_TEMPLATE__ - template-based file; delete this line to prevent this file from being updated -->
+<html lang="en">
+
+<head>
+	<title>Verge3D Web Interactive</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+	<meta
+		name="viewport"
+		content="width=device-width, initial-scale=1"
+	/>
+	<!-- Search Engines -->
+	<meta name="description"
+	      content="Interactive 3D Web application made with Verge3D. Immerse yourself in amazing graphics experience offered by state-of-the WebGL and HTML5 technologies.">
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Verge3D Web Interactive">
+	<meta name="twitter:description"
+	      content="Interactive 3D Web application made with Verge3D. Immerse yourself in amazing graphics experience offered by state-of-the WebGL and HTML5 technologies.">
+	<meta name="twitter:image:src" content="https://cdn.soft8soft.com/images/player_socials.jpg">
+	<!-- Open Graph -->
+	<meta property="og:title" content="Verge3D Web Interactive">
+	<meta property="og:description"
+	      content="Interactive 3D Web application made with Verge3D. Immerse yourself in amazing graphics experience offered by state-of-the WebGL and HTML5 technologies.">
+	<meta property="og:image" content="https://cdn.soft8soft.com/images/player_socials.jpg">
+	<meta property="og:type" content="website">
+
+	<meta name="generator" content="Verge3D 3.8.1">
+
+	<!-- favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="media/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16x16.png">
+	<link rel="manifest" href="media/manifest.json">
+	<link rel="mask-icon" href="media/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="theme-color" content="#ffffff">
+
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+	        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="v3d.js"></script>
+	<script src="Champion.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="Champion.css">
+	<link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+<div class="main d-flex h-100 w-100 align-items-stretch">
+	<div class="panel">
+		<div id="scrollbar" class="scrollbar d-flex flex-sm-row flex-lg-column align-items-start justify-content-start">
+			<h5 class="title w-100 text-center"><b>PART</b></h5>
+			<div class="part-item-container d-flex flex-column align-items-center">
+				<button id="toe-btn" class="part-btn toe" data-target="toe">
+					<img src="assets/images/toe.png" alt="img-toe">
+					<span>TOE</span>
+				</button>
+			</div>
+			<div class="part-item-container d-flex flex-column align-items-center">
+				<button id="tongue-btn" class="part-btn tongue-btn" data-target="tongue">
+					<img src="assets/images/tongue.png" alt="img-toe">
+					<span>TONGUE</span>
+				</button>
+			</div>
+			<div class="part-item-container d-flex flex-column align-items-center">
+				<button id="strap-btn" class="part-btn strap-btn" data-target="strap">
+					<img src="assets/images/strap.png" alt="img-toe">
+					<span>COVER</span>
+				</button>
+			</div>
+			<div class="part-item-container d-flex flex-column align-items-center">
+				<button id="right-btn" class="part-btn right-btn" data-target="right">
+					<img src="assets/images/right.png" alt="img-toe">
+					<span>OUTSIDE</span>
+				</button>
+			</div>
+			<div class="part-item-container d-flex flex-column align-items-center">
+				<button id="left-btn" class="part-btn left-btn" data-target="left">
+					<img src="assets/images/left.png" alt="img-toe">
+					<span>INSIDE</span>
+				</button>
+			</div>
+			<div class="part-item-container d-flex flex-column align-items-center">
+				<button id="counter-btn" class="part-btn counter-btn" data-target="counter">
+					<img src="assets/images/cover.png" alt="img-toe">
+					<span>COUNTER</span>
+				</button>
+			</div>
+			<div class="part-item-container d-flex flex-column align-items-center">
+				<button id="top-btn" class="part-btn top-btn" data-target="top">
+					<img src="assets/images/top.png" alt="img-toe">
+					<span>BACK TOP</span>
+				</button>
+			</div>
+
+			<!--		DESIGN-->
+
+			<h5 class="title w-100 text-center"><b>DESIGN</b></h5>
+			<div class="part-item-container d-flex flex-column align-items-center">
+				<button class="part-btn customlogo-btn">
+					<img src="assets/images/customlogo.png" alt="img-toe">
+				</button>
+			</div>
+			<div class="part-item-container d-flex flex-column align-items-center">
+				<button class="part-btn straplogo1-btn">
+					<img src="assets/images/straplogo.png" alt="img-toe">
+				</button>
+			</div>
+			<div class="part-item-container d-flex flex-column align-items-center">
+				<button class="part-btn straplogo2-btn">
+					<img src="assets/images/straplogo_1.png" alt="img-toe">
+				</button>
+			</div>
+			<div class="part-item-container d-flex flex-column align-items-center">
+				<button class="part-btn rightlogo2-btn">
+					<img src="assets/images/right1.png" alt="img-toe">
+				</button>
+			</div>
+			<div class="part-item-container d-flex flex-column align-items-center">
+				<button class="part-btn leftlogo-btn">
+					<img src="assets/images/counterlogo.png" alt="img-toe">
+				</button>
+			</div>
+			<div class="part-item-container d-flex flex-column align-items-center">
+				<button class="part-btn counterlogo-btn">
+					<img src="assets/images/counterlogo_1.png" alt="img-toe">
+				</button>
+			</div>
+		</div>
+
+
+
+		<div class="material-section ">
+				<div id="toe" class="material-item active " data-target="mui">
+					<h5 class="title">TOE</h5>
+					<div class="container-btn d-flex flex-wrap">
+						<button class="btn-glossy active" data-color="#0095FF" data-type="0">
+							<img src="./assets/icon/glossy_navi.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#00FFCF" data-type="0">
+							<img src="./assets/icon/glossy_green.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#FF5F98" data-type="0">
+							<img src="./assets/icon/glossy_pink.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#D2A1FF" data-type="0">
+							<img src="./assets/icon/glossy_purple.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#FF0009" data-type="0">
+							<img src="./assets/icon/glossy_red.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#FFFFFF" data-type="0">
+							<img src="./assets/icon/glossy_white.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#FEFF8F" data-type="0">
+							<img src="./assets/icon/glossy_yellow.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#D2A1FF" data-type="1">
+							<img src="./assets/icon/carbon.jpg" alt="">
+						</button>
+					</div>
+					<h5 class="title">SILK LEATHER</h5>
+					<div class="container-btn d-flex flex-wrap">
+						<button class="btn-glossy" data-color="#00D0A6" data-type="0">
+							<img src="./assets/icon/leather_green.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#C14D73" data-type="0">
+							<img src="./assets/icon/leather_pink.jpg" alt="">
+						</button>
+					</div>
+					<h5 class="title">MATT LEATHER</h5>
+					<div class="container-btn d-flex flex-wrap">
+						<button class="btn-glossy" data-color="#000000" data-type="2">
+							<img src="./assets/icon/leather_black.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#1A1639" data-type="2">
+							<img src="./assets/icon/leather_navi.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#DBDBDB" data-type="2">
+							<img src="./assets/icon/leather_white.jpg" alt="">
+						</button>
+					</div>
+				</div>
+				<div id="tongue" class="material-item" data-target="tongue">
+					<h5 class="title">Tongue</h5>
+					<div class="container-btn d-flex flex-wrap">
+						<button class="btn-glossy active" data-color="#0095FF" data-type="0">
+							<img src="./assets/icon/glossy_navi.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#00FFCF" data-type="0">
+							<img src="./assets/icon/glossy_green.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#FF5F98" data-type="0">
+							<img src="./assets/icon/glossy_pink.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#D2A1FF" data-type="0">
+							<img src="./assets/icon/glossy_purple.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#FF0009" data-type="0">
+							<img src="./assets/icon/glossy_red.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#FFFFFF" data-type="0">
+							<img src="./assets/icon/glossy_white.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#FEFF8F" data-type="0">
+							<img src="./assets/icon/glossy_yellow.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#D2A1FF" data-type="1">
+							<img src="./assets/icon/carbon.jpg" alt="">
+						</button>
+					</div>
+					<h5 class="title">SILK LEATHER</h5>
+					<div class="container-btn d-flex flex-wrap">
+						<button class="btn-glossy" data-color="#00D0A6" data-type="0">
+							<img src="./assets/icon/leather_green.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#C14D73" data-type="0">
+							<img src="./assets/icon/leather_pink.jpg" alt="">
+						</button>
+					</div>
+					<h5 class="title">MATT LEATHER</h5>
+					<div class="container-btn d-flex flex-wrap">
+						<button class="btn-glossy" data-color="#000000" data-type="2">
+							<img src="./assets/icon/leather_black.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#1A1639" data-type="2">
+							<img src="./assets/icon/leather_navi.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#DBDBDB" data-type="2">
+							<img src="./assets/icon/leather_white.jpg" alt="">
+						</button>
+					</div>
+				</div>
+				<div id="strap" class="material-item" data-target="strap">
+					<h5 class="title">COVER</h5>
+					<div class="container-btn d-flex flex-wrap">
+						<button class="btn-glossy active" data-color="#0095FF" data-type="0">
+							<img src="./assets/icon/glossy_navi.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#00FFCF" data-type="0">
+							<img src="./assets/icon/glossy_green.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#FF5F98" data-type="0">
+							<img src="./assets/icon/glossy_pink.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#D2A1FF" data-type="0">
+							<img src="./assets/icon/glossy_purple.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#FF0009" data-type="0">
+							<img src="./assets/icon/glossy_red.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#FFFFFF" data-type="0">
+							<img src="./assets/icon/glossy_white.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#FEFF8F" data-type="0">
+							<img src="./assets/icon/glossy_yellow.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#D2A1FF" data-type="1">
+							<img src="./assets/icon/carbon.jpg" alt="">
+						</button>
+					</div>
+					<h5 class="title">SILK LEATHER</h5>
+					<div class="container-btn d-flex flex-wrap">
+						<button class="btn-glossy" data-color="#00D0A6" data-type="0">
+							<img src="./assets/icon/leather_green.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#C14D73" data-type="0">
+							<img src="./assets/icon/leather_pink.jpg" alt="">
+						</button>
+					</div>
+					<h5 class="title">MATT LEATHER</h5>
+					<div class="container-btn d-flex flex-wrap">
+						<button class="btn-glossy" data-color="#000000" data-type="2">
+							<img src="./assets/icon/leather_black.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#1A1639" data-type="2">
+							<img src="./assets/icon/leather_navi.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#DBDBDB" data-type="2">
+							<img src="./assets/icon/leather_white.jpg" alt="">
+						</button>
+					</div>
+				</div>
+
+
+				<div id="right" class="material-item" data-target="right">
+					<div>
+						<h5 class="title">SILK LEATHER</h5>
+						<div class="container-btn d-flex flex-wrap">
+							<button class="btn-glossy active" data-color="#0095FF" data-type="0">
+								<img src="./assets/icon/glossy_navi.jpg" alt="">
+							</button>
+							<button class="btn-glossy" data-color="#00FFCF" data-type="0">
+								<img src="./assets/icon/glossy_green.jpg" alt="">
+							</button>`
+							<button class="btn-glossy" data-color="#FF5F98" data-type="0">
+								<img src="./assets/icon/glossy_pink.jpg" alt="">
+							</button>
+							<button class="btn-glossy" data-color="#D2A1FF" data-type="0">
+								<img src="./assets/icon/glossy_purple.jpg" alt="">
+							</button>
+							<button class="btn-glossy" data-color="#FF0009" data-type="0">
+								<img src="./assets/icon/glossy_red.jpg" alt="">
+							</button>
+							<button class="btn-glossy" data-color="#FFFFFF" data-type="0">
+								<img src="./assets/icon/glossy_white.jpg" alt="">
+							</button>
+							<button class="btn-glossy" data-color="#FEFF8F" data-type="0">
+								<img src="./assets/icon/glossy_yellow.jpg" alt="">
+							</button>
+							<button class="btn-glossy" data-color="#D2A1FF" data-type="1">
+								<img src="./assets/icon/carbon.jpg" alt="">
+							</button>
+						</div>
+						<h5 class="title">SILK LEATHER</h5>
+						<div class="container-btn d-flex flex-wrap">
+							<button class="btn-glossy" data-color="#00D0A6" data-type="0">
+								<img src="./assets/icon/leather_green.jpg" alt="">
+							</button>
+							<button class="btn-glossy" data-color="#C14D73" data-type="0">
+								<img src="./assets/icon/leather_pink.jpg" alt="">
+							</button>
+						</div>
+						<h5 class="title">MATT LEATHER</h5>
+						<div class="container-btn d-flex flex-wrap">
+							<button class="btn-glossy" data-color="#000000" data-type="2">
+								<img src="./assets/icon/leather_black.jpg" alt="">
+							</button>
+							<button class="btn-glossy" data-color="#1A1639" data-type="2">
+								<img src="./assets/icon/leather_navi.jpg" alt="">
+							</button>
+							<button class="btn-glossy" data-color="#DBDBDB" data-type="2">
+								<img src="./assets/icon/leather_white.jpg" alt="">
+							</button>
+						</div>
+					</div>
+				</div>
+				<div id="left" class="material-item" data-target="left">
+					<h5 class="title">INSIDE</h5>
+					<div class="container-btn d-flex flex-wrap">
+						<button class="btn-glossy active" data-color="#0095FF" data-type="0">
+							<img src="./assets/icon/glossy_navi.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#00FFCF" data-type="0">
+							<img src="./assets/icon/glossy_green.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#FF5F98" data-type="0">
+							<img src="./assets/icon/glossy_pink.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#D2A1FF" data-type="0">
+							<img src="./assets/icon/glossy_purple.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#FF0009" data-type="0">
+							<img src="./assets/icon/glossy_red.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#FFFFFF" data-type="0">
+							<img src="./assets/icon/glossy_white.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#FEFF8F" data-type="0">
+							<img src="./assets/icon/glossy_yellow.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#D2A1FF" data-type="1">
+							<img src="./assets/icon/carbon.jpg" alt="">
+						</button>
+					</div>
+					<h5 class="title">SILK LEATHER</h5>
+					<div class="container-btn d-flex flex-wrap">
+						<button class="btn-glossy" data-color="#00D0A6" data-type="0">
+							<img src="./assets/icon/leather_green.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#C14D73" data-type="0">
+							<img src="./assets/icon/leather_pink.jpg" alt="">
+						</button>
+					</div>
+					<h5 class="title">MATT LEATHER</h5>
+					<div class="container-btn d-flex flex-wrap">
+						<button class="btn-glossy" data-color="#000000" data-type="2">
+							<img src="./assets/icon/leather_black.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#1A1639" data-type="2">
+							<img src="./assets/icon/leather_navi.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#DBDBDB" data-type="2">
+							<img src="./assets/icon/leather_white.jpg" alt="">
+						</button>
+					</div>
+				</div>
+
+
+
+				<div id="counter" class="material-item" data-target="counter">
+					<h5 class="title">COUNTER</h5>
+					<div class="container-btn d-flex flex-wrap">
+						<button class="btn-glossy active" data-color="#0095FF" data-type="0">
+							<img src="./assets/icon/glossy_navi.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#00FFCF" data-type="0">
+							<img src="./assets/icon/glossy_green.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#FF5F98" data-type="0">
+							<img src="./assets/icon/glossy_pink.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#D2A1FF" data-type="0">
+							<img src="./assets/icon/glossy_purple.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#FF0009" data-type="0">
+							<img src="./assets/icon/glossy_red.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#FFFFFF" data-type="0">
+							<img src="./assets/icon/glossy_white.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#FEFF8F" data-type="0">
+							<img src="./assets/icon/glossy_yellow.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#D2A1FF" data-type="1">
+							<img src="./assets/icon/carbon.jpg" alt="">
+						</button>
+					</div>
+					<h5 class="title">SILK LEATHER</h5>
+					<div class="container-btn d-flex flex-wrap">
+						<button class="btn-glossy" data-color="#00D0A6" data-type="0">
+							<img src="./assets/icon/leather_green.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#C14D73" data-type="0">
+							<img src="./assets/icon/leather_pink.jpg" alt="">
+						</button>
+					</div>
+					<h5 class="title">MATT LEATHER</h5>
+					<div class="container-btn d-flex flex-wrap">
+						<button class="btn-glossy" data-color="#000000" data-type="2">
+							<img src="./assets/icon/leather_black.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#1A1639" data-type="2">
+							<img src="./assets/icon/leather_navi.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#DBDBDB" data-type="2">
+							<img src="./assets/icon/leather_white.jpg" alt="">
+						</button>
+					</div>
+				</div>
+
+
+
+
+
+
+				<div id="top" class="material-item" data-target="top">
+					<h5 class="title">BACK TOP</h5>
+					<div class="container-btn d-flex flex-wrap">
+						<button class="btn-glossy active" data-color="#0095FF" data-type="0">
+							<img src="./assets/icon/glossy_navi.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#00FFCF" data-type="0">
+							<img src="./assets/icon/glossy_green.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#FF5F98" data-type="0">
+							<img src="./assets/icon/glossy_pink.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#D2A1FF" data-type="0">
+							<img src="./assets/icon/glossy_purple.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#FF0009" data-type="0">
+							<img src="./assets/icon/glossy_red.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#FFFFFF" data-type="0">
+							<img src="./assets/icon/glossy_white.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#FEFF8F" data-type="0">
+							<img src="./assets/icon/glossy_yellow.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#D2A1FF" data-type="1">
+							<img src="./assets/icon/carbon.jpg" alt="">
+						</button>
+					</div>
+					<h5 class="title">SILK LEATHER</h5>
+					<div class="container-btn d-flex flex-wrap">
+						<button class="btn-glossy" data-color="#00D0A6" data-type="0">
+							<img src="./assets/icon/leather_green.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#C14D73" data-type="0">
+							<img src="./assets/icon/leather_pink.jpg" alt="">
+						</button>
+					</div>
+					<h5 class="title">MATT LEATHER</h5>
+					<div class="container-btn d-flex flex-wrap">
+						<button class="btn-glossy" data-color="#000000" data-type="2">
+							<img src="./assets/icon/leather_black.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#1A1639" data-type="2">
+							<img src="./assets/icon/leather_navi.jpg" alt="">
+						</button>
+						<button class="btn-glossy" data-color="#DBDBDB" data-type="2">
+							<img src="./assets/icon/leather_white.jpg" alt="">
+						</button>
+					</div>
+					<h5 class="title">GLOSSY LEATHER</h5>
+					<div class="container-btn d-flex flex-wrap">
+						<button class="top-black"></button>
+						<button class="top-green"></button>
+						<button class="top-navi"></button>
+						<button class="top-pink"></button>
+						<button class="top-white"></button>
+					</div>
+				</div>
+
+
+
+
+							<div class="d-flex flex-row">
+								<button type="button" class="side-btn btn btn-outline-danger col mr-1 " data-target="left">
+									<span class="font-weight-bold">LEFT</span>
+								</button>
+								<button type="button" class="side-btn btn btn-outline-danger col ml-1 active" data-target="right">
+									<span class="font-weight-bold">RIGHT</span>
+								</button>
+							</div>
+							<button type="button" class="side-btn btn btn-outline-danger mt-2 mb-2 mt-md-3 w-100"
+							        data-target="pair">
+								<span class="font-weight-bold">PAIR</span>
+							</button>
+							<button type="button" class="side-btn btn btn-success mt-2 mb-2 mt-md-3 w-100">
+								<span class="font-weight-bold">ADD TO CART</span>
+							</button>
+						</div>
+
+
+
+	</div>
+	<div id="v3d-container" class="d-flex flex-grow-1">
+		<div id="fullscreen_button" class="fullscreen-button fullscreen-open" title="Toggle fullscreen mode"></div>
+		<div id="spinner_container" class="spinner-container justify-content-center align-items-center">
+			<div class="spinner-grow text-success" role="status">
+			</div>
+			<div class="spinner-grow text-danger" role="status">
+			</div>
+			<div class="spinner-grow text-warning" role="status">
+			</div>
+		</div>
+
+		<div class="alert alert-warning alert-dismissible fade" role="alert"
+		     style="position: absolute; bottom: 0; right: 1em; left: 1em">
+			<strong>Please select size and mount</strong>
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+
+	</div>
+</div>
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script src="js/index.js"></script>
+</body>
+
+</html>
